@@ -18,16 +18,17 @@ body {
 
 .form-signin .form-floating:focus-within {
     z-index: 2;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.form-signin input[type="text"] {
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 .form-signin input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.form-signin input[type="password"] {
     margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-radius: 5px;
+    /* border-top-right-radius: 0; */
 }
