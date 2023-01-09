@@ -46,7 +46,8 @@ app.post("/", function (req, res) {
   request.write(jsonData);
   request.end();
 });
-keep working 
+
+// requesting docs from API = try again;
 
 app.listen(3000, function () {
   console.log("Server is running on port 3000.");
