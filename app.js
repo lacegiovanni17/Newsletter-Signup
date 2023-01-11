@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
+const https = require('https');
 
 const app = express();
 
@@ -34,12 +35,18 @@ app.post("/", function (req, res) {
 
   const options = {
     method: "POST",
-    auth: "ChuddiK:0d26ca2f5a0668dba54e6d39fde0a845-us21",
+    auth: "ChuddiK:15d63bd28709a1626e1e1048b7b19edc-us21",
   };
 
-  const request = https.request(url, options, function (response) {
+    const request = https.request(url, options, function (response) {
+        if (response.statusCode === 200) {
+            res.send("Successfully subscribed!");
+        } else {
+            res.send("There was an error with signing up, please try again!");
+        }
+
     response.on("data", function (data) {
-    //   console.log(JSON.parse(data));
+      console.log(JSON.parse(data));
     });
   });
 
@@ -47,13 +54,13 @@ app.post("/", function (req, res) {
   request.end();
 });
 
-// requesting docs from API = try again;
+
 
 app.listen(3000, function () {
   console.log("Server is running on port 3000.");
 });
 
 //API Keys
-// 0d26ca2f5a0668dba54e6d39fde0a845-us21
+// 15d63bd28709a1626e1e1048b7b19edc-us21
 
 // cb5ff9cd3f;
