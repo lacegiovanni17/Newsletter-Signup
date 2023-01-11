@@ -2,7 +2,7 @@
 This is a newsletter sign-up page. Try it! 
 👋 Hi, I’m Chidike Henry 
 😎 I’m a web developer 
-💻 This is simple Sign Up page website made with HTML, CSS and Javascript. You can play the game by clicking the buttons to get a reaction.  
+💻 This is simple Sign Up page website made with HTML, CSS and Javascript. This is website is made using mailchimp API key You can sign up and subscribe to  my mailing list for my e-comm shop by clicking the buttons to get a reaction. 
 🌍 Website:   
 💞️ I’m looking to collaborate on JS projects 
 📫 How to reach me dk1online25@gmail.com
