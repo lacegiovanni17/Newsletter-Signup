@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
-const https = require('https');
+const https = require("https");
 
 const app = express();
 
@@ -38,12 +38,12 @@ app.post("/", function (req, res) {
     auth: "ChuddiK:15d63bd28709a1626e1e1048b7b19edc-us21",
   };
 
-    const request = https.request(url, options, function (response) {
-        if (response.statusCode === 200) {
-            res.sendFile(__dirname + "/success.html");
-        } else {
-            res.sendFile(__dirname + "/failure.html");
-        }
+  const request = https.request(url, options, function (response) {
+    if (response.statusCode === 200) {
+      res.sendFile(__dirname + "/success.html");
+    } else {
+      res.sendFile(__dirname + "/failure.html");
+    }
 
     response.on("data", function (data) {
       console.log(JSON.parse(data));
@@ -56,9 +56,9 @@ app.post("/", function (req, res) {
 
 app.post("/failure", function (req, res) {
   res.redirect("/");
-})
+});
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log("Server is running on port 3000.");
 });
 
